@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  />
+  
+  <!-- Google Fonts: Inter -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Material Icons -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  <title>Fintech Landing Page | Sara Mehrasa</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <div class="logo">
+        <span class="material-icons logo-icon">account_balance</span>
+        <span class="logo-text">logoplace</span>
+      </div>
+
+      <!-- Hamburger (visible on tablet/mobile) -->
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#" class="nav-link">Get Started</a></li>
+          <li><a href="#" class="nav-link">How It Works?</a></li>
+          <li><a href="#" class="nav-link">Blog</a></li>
+          <li><a href="#" class="nav-link">Rates &amp; Fees</a></li>
+          <li>
+            <a href="#" class="btn-contact nav-link">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+
+    <div class="hero-content">
+      <!-- Headline and Subheadline -->
+      <div class="hero-text">
+        <h1>Get a Bigger Loan with Two Guarantors</h1>
+        <p class="hero-sub">Instant Loans at the Best Rates, Borrow from €1,000 to €20,000 over 12 months at a 5% annual rate.</p>
+        <a href="#loan-form" class="btn-hero">Try to Get Loan →</a>
+      </div>
+
+      <!-- Right: Illustration -->
+      <div class="hero-illustration">
+        <img src="img/hero-illustration.png" alt="Fintech Savings Illustration" />
+      </div>
+    </div>
+	
+	<div class="animated-waves-bg">
+		<svg width="100%" height="320" viewBox="0 0 1920 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path class="wave wave1" d="M0,200 Q480,120 960,200 Q1440,280 1920,200" stroke="#7F8C8D" stroke-width="1" fill="none"/>
+			<path class="wave wave2" d="M0,220 Q480,140 960,220 Q1440,300 1920,220" stroke="#A4AFAF" stroke-width="1" fill="none" opacity="0.6"/>
+			<path class="wave wave3" d="M0,240 Q480,160 960,240 Q1440,320 1920,240" stroke="#7F8C8D" stroke-width="1" fill="none" opacity="0.3"/>
+		</svg>
+	</div>
+  </section>
+
+  <!-- LOAN FORM SECTION -->
+  <section id="loan-section">
+    <div class="loan-form-container">
+      <h2 class="loan-heading">
+        Loan from €1,000 to €20,000 over 12 months at a 5% annual rate.
+      </h2>
+
+      <form id="loan-form" novalidate>
+        <!-- 1. Loan Amount Slider -->
+        <div class="form-group">
+          <label for="amount-slider">1. Enter your loan amount</label>
+          <div class="slider-wrapper">
+            <input 
+              type="range" 
+              id="amount-slider" 
+              name="amount" 
+              min="1000" 
+              max="20000" 
+              step="1000" 
+              value="10000"
+            />
+            <div class="slider-tooltip" id="slider-tooltip">€10,000</div>
+            <span id="amount-display">€10,000</span>
+          </div>
+        </div>
+
+        <!-- 2. Full Name -->
+        <div class="form-group">
+          <label for="name">2. Enter your full name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Full Name" 
+            required
+          />
+        </div>
+
+        <!-- 3. Email Address -->
+        <div class="form-group">
+          <label for="email">3. Enter your email address</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Email Address" 
+            required
+          />
+        </div>
+
+        <!-- 4. Phone Number -->
+        <div class="form-group">
+          <label for="phone">4. Enter your phone number</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="Phone Number" 
+            required
+          />
+        </div>
+
+        <!-- 5. Terms & Conditions -->
+        <div class="form-group checkbox-group">
+          <input 
+            type="checkbox" 
+            id="terms" 
+            name="terms" 
+            required
+          />
+          <label for="terms">I accept the terms and conditions</label>
+        </div>
+
+        <!-- 6. Co‐applicant Checkbox -->
+        <div class="form-group checkbox-group">
+          <input 
+            type="checkbox" 
+            id="coapplicant" 
+            name="coapplicant"
+          />
+          <label for="coapplicant">I am applying with a co‐applicant</label>
+        </div>
+
+        <!-- Monthly Payment Display -->
+        <div class="monthly-payment">
+          <span>Monthly Payment:</span> 
+          <strong id="payment-amount">€0.00</strong>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN SECTION -->
+  <section id="countdown-section">
+    <div class="countdown-inner">
+      <div class="count-card days">
+        <div class="count-value" id="days">00</div>
+        <div class="count-label">DAYS</div>
+      </div>
+      <div class="count-card hours">
+        <div class="count-value" id="hours">00</div>
+        <div class="count-label">HOURS</div>
+      </div>
+      <div class="count-card minutes">
+        <div class="count-value" id="minutes">00</div>
+        <div class="count-label">MINUTES</div>
+      </div>
+      <div class="count-card seconds">
+        <div class="count-value" id="seconds">00</div>
+        <div class="count-label">SECONDS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN FEATURES -->
+  <section id="features">
+    <div class="features-inner">
+      <h2 class="section-title">Main Features</h2>
+      <p class="section-sub">
+        Lorem ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+
+      <div class="feature-list">
+        <div class="feature-card">
+          <span class="material-icons feature-icon">schedule</span>
+          <h3 class="feature-title">Monitoring 24/7</h3>
+          <p class="feature-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Elementum nisi aliquet volutpat.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="material-icons feature-icon">desktop_mac</span>
+          <h3 class="feature-title">Widget System</h3>
+          <p class="feature-desc">
+            Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
+            Vitae et, tortor pulvinar risus pulvinar.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="material-icons feature-icon">rocket_launch</span>
+          <h3 class="feature-title">Best Performance</h3>
+          <p class="feature-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Elementum nisi aliquet volutpat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- Left: Logo & Contact Info -->
+      <div class="footer-col contact-info">
+        <div class="footer-logo">
+          <span class="material-icons footer-logo-icon">account_balance</span>
+          <span class="footer-logo-text">logoplace</span>
+        </div>
+        <p class="footer-text">
+          <span class="material-icons footer-icon">email</span>
+          sm.saramehrasa@gmail.com
+        </p>
+        <p class="footer-text">
+          <span class="material-icons footer-icon">phone</span>
+          +358 41 580 8874
+        </p>
+      </div>
+
+      <!-- Center: Footer Menu -->
+      <div class="footer-col footer-menu">
+        <ul>
+          <li><a href="#" class="footer-link">Get Started</a></li>
+          <li><a href="#" class="footer-link">How It Works?</a></li>
+          <li><a href="#" class="footer-link">Rates &amp; Fees</a></li>
+          <li><a href="#" class="footer-link">Customer Stories</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Social & Contact Button -->
+      <div class="footer-col social-contact">
+        <div class="follow-us">
+          <span>Follow us</span>
+          <a href="#" class="social-icon"><span class="material-icons">facebook</span></a>
+		  <a href="#" class="social-icon"><span class="material-icons">linkedin</span></a>
+        </div>
+        <a href="#" class="btn-contact-footer">Contact us →</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-copyright">© 2025 Sara Mehrasa. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
